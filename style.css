@@ -1,0 +1,68 @@
+/* style.css */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #f4f4f4; color: #222; }
+header {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed; width: 100%; top: 0; left: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem; z-index: 10; backdrop-filter: blur(10px);
+}
+header h1 { color: #fff; font-size: 1.6rem; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+nav a { color: #fff; text-decoration: none; font-weight: bold; transition: 0.3s; }
+nav a:hover { color: #00bfff; }
+.hero {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  color: #fff; text-align: center; padding: 2rem;
+}
+.hero h2 { font-size: 3rem; animation: fadeInDown 1s ease-out; }
+.hero p { font-size: 1.2rem; max-width: 600px; animation: fadeInUp 1s ease-out; }
+section { padding: 5rem 2rem; max-width: 1000px; margin: auto; }
+section h2 { color: #003366; font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+section p, section li { font-size: 1.1rem; line-height: 1.6; }
+ul li { margin-bottom: 0.6rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+.card {
+  background: white; border-radius: 12px; padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s ease-in-out;
+}
+.card:hover { transform: translateY(-10px); }
+.contato a { color: #0077aa; text-decoration: none; }
+.contato a:hover { text-decoration: underline; }
+footer {
+  background: #003366; color: white; text-align: center;
+  padding: 2rem 1rem; margin-top: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+form input, form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+form button {
+  padding: 0.8rem;
+  background: #0077aa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #005f88;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
